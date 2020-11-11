@@ -1,0 +1,45 @@
+{
+  getPosts{
+    id
+    username
+    body
+    comments{
+      id
+      username
+    }
+    likes{
+      id
+      username
+    }
+    createdAt
+    likeCount
+    commentCount
+  }
+}
+
+#######################
+
+mutation{
+  createComment(postId: "5fa3ab498d2b9e3e90d91777", body: "A simple comment"){
+    id
+    username
+    body
+  }
+}
+
+#######################
+
+mutation {
+  login(username: "user", password: "123456"){
+    token
+  }
+}
+
+#######################
+
+{
+  "Authorization" : "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVmOTg3ZGViNjA1YTQ2MmNjOGUxZDA1ZSIsImVtYWlsIjoidXNlckB1c2VyLmNvbSIsInVzZXJuYW1lIjoidXNlciIsImlhdCI6MTYwNDU2MzkzNCwiZXhwIjoxNjA0NTY3NTM0fQ.HYmlcsf3VybTrAKvDdAySX6BD406B-yuzwGuzCRFvS0"
+}
+
+#######################
+
